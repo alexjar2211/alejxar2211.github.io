@@ -13,12 +13,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Inicializar transferencia FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          server: 181.39.238.180
-          username: ubuntu
-          port: 222
-          protocol: ftps
-          server-dir: /home/ubuntu/andres/web/
-          password: ${{ secrets.SFTP_PASS_RASBERRY }}
-          security: loose
+          ftp-server: ${{ secrets.SFTP_DIR_RASBERRY }}
+          ftp-username: ubuntu
+          ftp-password: ${{ secrets.SFTP_PASS_RASBERRY }}
+          git-ftp-args: --insecure
