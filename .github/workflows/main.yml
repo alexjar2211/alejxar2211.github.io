@@ -18,7 +18,7 @@ jobs:
           server: 181.39.238.180
           username: ubuntu
           port: 222
-          protocol: sftp
+          protocol: ftps
           server-dir: /home/ubuntu/andres/web/
           password: ${{ secrets.SFTP_PASS_RASBERRY }}
           security: loose
