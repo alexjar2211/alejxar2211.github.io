@@ -15,7 +15,10 @@ jobs:
       - name: Inicializar transferencia FTP
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ${{ secrets.SFTP_DIR_RASBERRY }}
+          server: 181.39.238.180
           username: ubuntu
+          port: 222
+          protocol: sftp
+          server-dir: /home/ubuntu/andres/web/
           password: ${{ secrets.SFTP_PASS_RASBERRY }}
           security: loose
